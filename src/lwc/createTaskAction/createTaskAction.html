@@ -1,0 +1,24 @@
+<!--
+ - Created by annis on 23/10/2023.
+ -->
+
+<!-- Create Task Action -->
+<template>
+    <lightning-quick-action-panel header="Task Manager">
+        <c-create-task lwc:ref="createToDo"
+                       target-parent={isAction}
+                       oncloseaction={closeAction}>
+        </c-create-task>
+        <div slot="footer">
+            <lightning-button variant="neutral"
+                              label="cancel"
+                              onclick={closeAction}>
+            </lightning-button>
+            <lightning-button class="slds-m-left_x-small"
+                              variant="brand"
+                              label="save"
+                              onclick={handleSave}>
+            </lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
